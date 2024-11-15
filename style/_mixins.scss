@@ -1,0 +1,4 @@
+@mixin center ($widthPage) {
+    padding-left: calc(50% - $widthPage / 2);
+    padding-right: calc(50% - $widthPage / 2);
+}
