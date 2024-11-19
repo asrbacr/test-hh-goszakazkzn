@@ -60,6 +60,7 @@
 }
 
 .content {
+  padding-bottom: 500px;
   background-color: #f9f9f9;
   padding-top: 40px;
 }
@@ -76,6 +77,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  box-sizing: border-box;
 }
 .content .no-wrap {
   flex-wrap: nowrap;
@@ -93,13 +95,14 @@
 .content .card__vertical {
   width: 320px;
   box-sizing: border-box;
+  padding: 40px 30px;
+}
+.content .card__img {
+  background-image: url("../image/card-img.jpg");
+  background-repeat: round;
 }
 .content .card__color {
   background-color: #5D71DD;
-  color: #fff;
-}
-.content .card__color .category {
-  background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 .content .card__color .date {
@@ -125,9 +128,18 @@
 }
 .content .category {
   border-radius: 8px;
-  background-color: rgba(93, 113, 221, 0.2);
+  background-color: rgba(93, 113, 221, 0.05);
   color: #5D71DD;
   padding: 8px 16px;
+  font-size: 16px;
+}
+.content .category__bg-color {
+  background-color: #7D8DE4;
+  color: #fff;
+}
+.content .category__bg-img {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 .content .fixed {
   max-width: 320px;
