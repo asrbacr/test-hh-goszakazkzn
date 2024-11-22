@@ -1,0 +1,68 @@
+@import "variables.scss";
+@import "mixins";
+@media (width < calc($widthLaptop + 1px)) {
+  .center {
+    @include center($widthLaptop);
+  }
+
+  .header__wrapper {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .content {
+    padding-bottom: 80px;
+    
+    &__wrapper {
+      padding-left: 42px;
+      padding-right: 42px;
+      // flex-direction: column;
+      gap: 0;
+    }
+
+    .fixed {
+      max-width: $widthLaptop;
+    }
+    .news {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      &__elem {
+        height: 6rem;
+
+        &:not(:last-child) {
+            border-bottom: none;
+            margin-bottom: 0;
+          }
+        
+        .text {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            // box-sizing: border-box;
+        //   -webkit-line-clamp: 2;
+        }
+      }
+    }
+  }
+
+  .string {
+    &-4, &-5 {
+      display: none;
+    }
+  }
+
+  .form {
+    margin-top: 60px;
+    padding: 40px 148px 50px;
+
+    &__wrap {
+        flex-direction: row;
+    }
+
+    &__text {
+        text-align: start;
+    }
+
+  }
+}

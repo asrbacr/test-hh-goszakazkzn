@@ -1,0 +1,92 @@
+@import "variables.scss";
+@import "mixins";
+@media (width < calc($widthMobile + 1px)) {
+  .center {
+    @include center($widthMobile);
+    overflow-x: hidden;
+    // visibility: hidden;
+  }
+
+  .header {
+    &__wrapper {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    .menu-mob {
+      display: block;
+    }
+  }
+
+  .content {
+    &__wrapper {
+      // flex-direction: column;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .news {
+      flex-direction: column;
+
+      &__elem:not(:last-child) {
+        border-bottom: 1px solid rgba($colorText, 0.2);
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .string-3 {
+    display: none;
+  }
+
+  .string-4 {
+    display: flex;
+  }
+
+  .pagination {
+    &__ul,
+    &__next,
+    &__prev {
+      display: none;
+    }
+    &__button {
+      display: block;
+      padding: 13px 50px;
+      // padding: 13px 68px;
+    }
+  }
+
+  .form {
+    padding: 40px 20px 50px;
+    gap: 30px;
+
+    &__text {
+      text-align: center;
+    }
+
+    &__button {
+      padding: 13px 65px;
+    }
+  }
+
+  .footer {
+    &__ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &__clarification {
+      text-align: center;
+      margin-top: 0;
+    }
+  }
+}
